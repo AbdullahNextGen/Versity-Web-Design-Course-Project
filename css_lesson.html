@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn HTML | CodePath</title>
+    <title>Learn CSS | CodePath</title>
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="html_style.css">
+    <link rel="stylesheet" href="css_style.css">
 </head>
 <body>
     <!-- Header -->
@@ -28,11 +28,11 @@
         <div class="container">
             <!-- Page Header -->
             <div class="page-header">
-                <div class="tech-icon html-icon">
-                    <i class="fab fa-html5"></i>
+                <div class="tech-icon css-icon">
+                    <i class="fab fa-css3-alt"></i>
                 </div>
-                <h1>HTML Basics</h1>
-                <p>The standard markup language for documents designed to be displayed in a web browser.</p>
+                <h1>CSS Fundamentals</h1>
+                <p>Style your web pages with Cascading Style Sheets</p>
             </div>
 
             <!-- Content Grid -->
@@ -40,37 +40,37 @@
                 <!-- Sidebar Navigation -->
                 <aside class="topics-sidebar">
                     <div class="sidebar-header">
-                        <h3>HTML Topics</h3>
+                        <h3>CSS Topics</h3>
                     </div>
 
                     <nav class="topic-nav">
-                        <a href="#structure" class="topic-link active">
-                            <i class="fas fa-code"></i>
-                            <span>Structure</span>
+                        <a href="#selectors" class="topic-link active">
+                            <i class="fas fa-bullseye"></i>
+                            <span>Selectors</span>
                         </a>
-                        <a href="#text" class="topic-link">
+                        <a href="#colors" class="topic-link">
+                            <i class="fas fa-palette"></i>
+                            <span>Colors</span>
+                        </a>
+                        <a href="#boxmodel" class="topic-link">
+                            <i class="fas fa-box-open"></i>
+                            <span>Box Model</span>
+                        </a>
+                        <a href="#typography" class="topic-link">
                             <i class="fas fa-font"></i>
-                            <span>Text</span>
+                            <span>Typography</span>
                         </a>
-                        <a href="#links" class="topic-link">
-                            <i class="fas fa-link"></i>
-                            <span>Links</span>
+                        <a href="#flexbox" class="topic-link">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Flexbox</span>
                         </a>
-                        <a href="#images" class="topic-link">
-                            <i class="fas fa-image"></i>
-                            <span>Images</span>
+                        <a href="#grid" class="topic-link">
+                            <i class="fas fa-th"></i>
+                            <span>Grid</span>
                         </a>
-                        <a href="#lists" class="topic-link">
-                            <i class="fas fa-list"></i>
-                            <span>Lists</span>
-                        </a>
-                        <a href="#tables" class="topic-link">
-                            <i class="fas fa-table"></i>
-                            <span>Tables</span>
-                        </a>
-                        <a href="#forms" class="topic-link">
-                            <i class="fas fa-check-square"></i>
-                            <span>Forms</span>
+                        <a href="#animations" class="topic-link">
+                            <i class="fas fa-film"></i>
+                            <span>Animations</span>
                         </a>
                     </nav>
                 </aside>
@@ -78,186 +78,217 @@
                 <!-- Main Content Area -->
                 <div class="main-content">
                     
-                    <!-- Basic Structure Section -->
-                    <section id="structure" class="topic-section active">
-                        <h2>Basic Structure</h2>
-                        <p class="section-description">Every HTML document requires a specific structure to be interpreted correctly by browsers.</p>
+                    <!-- Selectors Section -->
+                    <section id="selectors" class="topic-section active">
+                        <h2>CSS Selectors</h2>
+                        <p class="section-description">Selectors define which HTML elements you want to style.</p>
                         
                         <div class="example-box">
                             <div class="code-header">
-                                <span>HTML Boilerplate</span>
+                                <span>Basic Selectors</span>
                                 <button class="copy-btn">
                                     <i class="far fa-copy"></i>
                                     Copy
                                 </button>
                             </div>
-                            <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Page Title&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;My First Heading&lt;/h1&gt;
-    &lt;p&gt;My first paragraph.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+                            <pre><code>/* Element Selector */
+p {
+    color: blue;
+}
+
+/* Class Selector */
+.container {
+    max-width: 1200px;
+}
+
+/* ID Selector */
+#header {
+    background-color: #333;
+}
+
+/* Descendant Selector */
+div p {
+    font-size: 16px;
+}</code></pre>
                         </div>
                     </section>
 
-                    <!-- Text Elements Section -->
-                    <section id="text" class="topic-section">
-                        <h2>Text Elements</h2>
-                        <p class="section-description">HTML provides various tags to format text, such as headings, paragraphs, and emphasis.</p>
+                    <!-- Colors Section -->
+                    <section id="colors" class="topic-section">
+                        <h2>Colors & Backgrounds</h2>
+                        <p class="section-description">Apply colors to text and backgrounds using names, HEX, RGB, or HSL values.</p>
                         
                         <div class="example-box">
                             <div class="code-header">
-                                <span>Typography Tags</span>
+                                <span>Color Examples</span>
                                 <button class="copy-btn">
                                     <i class="far fa-copy"></i>
                                     Copy
                                 </button>
                             </div>
-                            <pre><code>&lt;!-- Headings --&gt;
-&lt;h1&gt;Main Title&lt;/h1&gt;
-&lt;h2&gt;Subtitle&lt;/h2&gt;
-
-&lt;!-- Paragraph --&gt;
-&lt;p&gt;This is a standard paragraph of text.&lt;/p&gt;
-
-&lt;!-- Formatting --&gt;
-&lt;strong&gt;Bold text&lt;/strong&gt; for importance.
-&lt;em&gt;Italic text&lt;/em&gt; for emphasis.
-&lt;span&gt;Inline container&lt;/span&gt; for styling.</code></pre>
-                        </div>
-                    </section>
-
-                    <!-- Links Section -->
-                    <section id="links" class="topic-section">
-                        <h2>Hyperlinks</h2>
-                        <p class="section-description">The anchor tag <code>&lt;a&gt;</code> defines a hyperlink, which is used to link from one page to another.</p>
-                        
-                        <div class="example-box">
-                            <div class="code-header">
-                                <span>Anchor Examples</span>
-                                <button class="copy-btn">
-                                    <i class="far fa-copy"></i>
-                                    Copy
-                                </button>
-                            </div>
-                            <pre><code>&lt;!-- Absolute URL --&gt;
-&lt;a href="https://www.google.com"&gt;Go to Google&lt;/a&gt;
-
-&lt;!-- Relative URL --&gt;
-&lt;a href="about.html"&gt;About Us&lt;/a&gt;
-
-&lt;!-- Open in new tab --&gt;
-&lt;a href="https://example.com" target="_blank"&gt;External Link&lt;/a&gt;
-
-&lt;!-- Email Link --&gt;
-&lt;a href="mailto:info@example.com"&gt;Send Email&lt;/a&gt;</code></pre>
-                        </div>
-                    </section>
-
-                    <!-- Images Section -->
-                    <section id="images" class="topic-section">
-                        <h2>Images</h2>
-                        <p class="section-description">Images are embedded using the <code>&lt;img&gt;</code> tag. It is an empty tag, meaning it has no closing tag.</p>
-                        
-                        <div class="example-box">
-                            <div class="code-header">
-                                <span>Image Attributes</span>
-                                <button class="copy-btn">
-                                    <i class="far fa-copy"></i>
-                                    Copy
-                                </button>
-                            </div>
-                            <pre><code>&lt;img src="image.jpg" alt="A descriptive text"&gt;
-
-&lt;!-- With width and height --&gt;
-&lt;img src="logo.png" alt="Company Logo" width="200" height="50"&gt;</code></pre>
-                        </div>
-                    </section>
-
-                    <!-- Lists Section -->
-                    <section id="lists" class="topic-section">
-                        <h2>Lists</h2>
-                        <p class="section-description">HTML offers three ways for specifying lists of information.</p>
-                        
-                        <div class="example-box">
-                            <div class="code-header">
-                                <span>List Types</span>
-                                <button class="copy-btn">
-                                    <i class="far fa-copy"></i>
-                                    Copy
-                                </button>
-                            </div>
-                            <pre><code>&lt;!-- Unordered List (Bullets) --&gt;
-&lt;ul&gt;
-    &lt;li&gt;Coffee&lt;/li&gt;
-    &lt;li&gt;Tea&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!-- Ordered List (Numbers) --&gt;
-&lt;ol&gt;
-    &lt;li&gt;Step One&lt;/li&gt;
-    &lt;li&gt;Step Two&lt;/li&gt;
-&lt;/ol&gt;</code></pre>
-                        </div>
-                    </section>
-
-                    <!-- Tables Section -->
-                    <section id="tables" class="topic-section">
-                        <h2>Tables</h2>
-                        <p class="section-description">A table allows you to arrange data into rows and columns.</p>
-                        
-                        <div class="example-box">
-                            <div class="code-header">
-                                <span>Table Structure</span>
-                                <button class="copy-btn">
-                                    <i class="far fa-copy"></i>
-                                    Copy
-                                </button>
-                            </div>
-                            <pre><code>&lt;table border="1"&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Name&lt;/th&gt;
-            &lt;th&gt;Role&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;John&lt;/td&gt;
-            &lt;td&gt;Developer&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-                        </div>
-                    </section>
-
-                    <!-- Forms Section -->
-                    <section id="forms" class="topic-section">
-                        <h2>Forms</h2>
-                        <p class="section-description">Forms are used to collect user input.</p>
-                        
-                        <div class="example-box">
-                            <div class="code-header">
-                                <span>Form Elements</span>
-                                <button class="copy-btn">
-                                    <i class="far fa-copy"></i>
-                                    Copy
-                                </button>
-                            </div>
-                            <pre><code>&lt;form action="/submit" method="POST"&gt;
-    &lt;label for="email"&gt;Email:&lt;/label&gt;
-    &lt;input type="email" id="email" name="email" required&gt;
+                            <pre><code>body {
+    /* Keyword */
+    color: black; 
     
-    &lt;label for="pwd"&gt;Password:&lt;/label&gt;
-    &lt;input type="password" id="pwd" name="pwd"&gt;
+    /* HEX Code */
+    background-color: #f4f4f4;
+}
+
+h1 {
+    /* RGB with Opacity */
+    color: rgba(255, 99, 71, 0.8);
     
-    &lt;button type="submit"&gt;Login&lt;/button&gt;
-&lt;/form&gt;</code></pre>
+    /* HSL */
+    background-color: hsl(120, 100%, 50%);
+}</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- Box Model Section -->
+                    <section id="boxmodel" class="topic-section">
+                        <h2>The Box Model</h2>
+                        <p class="section-description">Every element is a box. Understanding margins, borders, padding, and content is crucial.</p>
+                        
+                        <div class="example-box">
+                            <div class="code-header">
+                                <span>Box Model Properties</span>
+                                <button class="copy-btn">
+                                    <i class="far fa-copy"></i>
+                                    Copy
+                                </button>
+                            </div>
+                            <pre><code>.card {
+    width: 300px;
+    
+    /* Space inside the border */
+    padding: 20px;
+    
+    /* The border itself */
+    border: 1px solid #ddd;
+    
+    /* Space outside the border */
+    margin: 15px;
+    
+    /* Ensure padding doesn't increase width */
+    box-sizing: border-box; 
+}</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- Typography Section -->
+                    <section id="typography" class="topic-section">
+                        <h2>Typography</h2>
+                        <p class="section-description">Style your text with fonts, sizes, weights, and alignment.</p>
+                        
+                        <div class="example-box">
+                            <div class="code-header">
+                                <span>Font Styles</span>
+                                <button class="copy-btn">
+                                    <i class="far fa-copy"></i>
+                                    Copy
+                                </button>
+                            </div>
+                            <pre><code>p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- Flexbox Section -->
+                    <section id="flexbox" class="topic-section">
+                        <h2>Flexbox</h2>
+                        <p class="section-description">A one-dimensional layout method for laying out items in rows or columns.</p>
+                        
+                        <div class="example-box">
+                            <div class="code-header">
+                                <span>Flex Container</span>
+                                <button class="copy-btn">
+                                    <i class="far fa-copy"></i>
+                                    Copy
+                                </button>
+                            </div>
+                            <pre><code>.container {
+    display: flex;
+    
+    /* Direction: row (default) or column */
+    flex-direction: row;
+    
+    /* Align items horizontally */
+    justify-content: center; /* center, space-between */
+    
+    /* Align items vertically */
+    align-items: center; 
+    
+    /* Allow wrapping to next line */
+    flex-wrap: wrap;
+}</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- Grid Section -->
+                    <section id="grid" class="topic-section">
+                        <h2>CSS Grid</h2>
+                        <p class="section-description">A two-dimensional layout system for columns and rows.</p>
+                        
+                        <div class="example-box">
+                            <div class="code-header">
+                                <span>Grid Layout</span>
+                                <button class="copy-btn">
+                                    <i class="far fa-copy"></i>
+                                    Copy
+                                </button>
+                            </div>
+                            <pre><code>.grid-layout {
+    display: grid;
+    
+    /* Create 3 equal columns */
+    grid-template-columns: repeat(3, 1fr);
+    
+    /* Gap between items */
+    gap: 20px;
+}
+
+.header {
+    /* Span across all 3 columns */
+    grid-column: 1 / -1;
+}</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- Animations Section -->
+                    <section id="animations" class="topic-section">
+                        <h2>Animations & Transitions</h2>
+                        <p class="section-description">Add movement and interactivity to your elements.</p>
+                        
+                        <div class="example-box">
+                            <div class="code-header">
+                                <span>Transition Example</span>
+                                <button class="copy-btn">
+                                    <i class="far fa-copy"></i>
+                                    Copy
+                                </button>
+                            </div>
+                            <pre><code>/* Smooth hover effect */
+.button {
+    background-color: blue;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: darkblue;
+}
+
+/* Keyframe Animation */
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}</code></pre>
                         </div>
                     </section>
 
@@ -284,32 +315,34 @@
     <!-- JavaScript Logic -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Sidebar Navigation Logic
+            // Logic to handle sidebar navigation switching
             const topicLinks = document.querySelectorAll('.topic-link');
             const topicSections = document.querySelectorAll('.topic-section');
 
+            // Set active topic on click
             topicLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     
-                    // Reset active states
+                    // Remove active class from all
                     topicLinks.forEach(l => l.classList.remove('active'));
                     topicSections.forEach(s => s.classList.remove('active'));
                     
-                    // Activate clicked link
+                    // Add active class to clicked link
                     this.classList.add('active');
                     
-                    // Show target section
+                    // Show corresponding section
                     const targetId = this.getAttribute('href');
                     const targetSection = document.querySelector(targetId);
                     if (targetSection) {
                         targetSection.classList.add('active');
+                        // Optional: Scroll to top of content on switch
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                     }
                 });
             });
 
-            // Copy to Clipboard Logic
+            // Logic to copy code to clipboard
             document.querySelectorAll('.copy-btn').forEach(button => {
                 button.addEventListener('click', function() {
                     const codeBlock = this.closest('.example-box').querySelector('code');
@@ -318,16 +351,13 @@
                     navigator.clipboard.writeText(codeText).then(() => {
                         const originalHtml = this.innerHTML;
                         this.innerHTML = '<i class="fas fa-check"></i> Copied!';
-                        // HTML specific styling for copy feedback
-                        this.style.background = 'rgba(227, 76, 38, 0.1)'; 
-                        this.style.color = '#e34c26';
-                        this.style.borderColor = '#e34c26';
+                        this.style.background = 'rgba(46, 204, 113, 0.2)';
+                        this.style.color = '#2ecc71';
                         
                         setTimeout(() => {
                             this.innerHTML = originalHtml;
                             this.style.background = '';
                             this.style.color = '';
-                            this.style.borderColor = '';
                         }, 2000);
                     });
                 });

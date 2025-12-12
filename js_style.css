@@ -6,13 +6,14 @@
 }
 
 :root {
-    --primary-color: #e34c26; /* HTML Orange Color */
-    --primary-dark: #c0392b;
+    /* JS Gold/Yellow - Darkened slightly for text readability on white */
+    --primary-color: #e6c200; 
+    --primary-dark: #bfa100;
     --text-dark: #333333;
     --text-light: #666666;
-    --bg-light: #fdfbfb; /* Slightly warmer bg for HTML page */
+    --bg-light: #fefefc; /* Very subtle warm white */
     --bg-white: #ffffff;
-    --code-bg: #1e1e1e;
+    --code-bg: #1e1e1e; /* Dark theme for JS code looks standard */
     --border-color: #e0e0e0;
     --sidebar-width: 250px;
 }
@@ -90,6 +91,18 @@ header nav {
     margin-bottom: 10px;
 }
 
+/* JS Icon often looks better with a slight background if pure yellow */
+.tech-icon.js-icon i {
+    color: #f7df1e; /* The bright official JS yellow for the icon */
+    background-color: black; /* JS logo usually has black bg or text */
+    padding: 2px; /* Small adjustment for FA icon aesthetics if needed */
+    border-radius: 4px;
+}
+/* Override generic tech-icon color for the big header icon to match brand */
+.tech-icon.js-icon {
+    color: #f7df1e;
+}
+
 .page-header h1 {
     font-size: 2.5rem;
     margin-bottom: 5px;
@@ -151,8 +164,8 @@ header nav {
 }
 
 .topic-link:hover {
-    background-color: #fff0eb; /* Very light orange tint */
-    color: var(--primary-color);
+    background-color: #fff9e6; /* Very light yellow tint */
+    color: var(--primary-dark); /* Use darker color for text readability */
 }
 
 .topic-link:hover i {
@@ -161,11 +174,16 @@ header nav {
 
 .topic-link.active {
     background-color: var(--primary-color);
-    color: white;
+    color: white; 
+    /* For JS yellow, sometimes black text is better contrast, 
+       but we used a darker gold for primary-color so white might be ok.
+       If it's too light, we can switch color to black below: */
+    /* color: #333; */ 
 }
 
 .topic-link.active i {
     color: white;
+    /* color: #333; */
 }
 
 /* --- Main Content --- */
@@ -253,6 +271,7 @@ header nav {
     font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
 }
 
+/* JS Code Highlighting Simulation (Simple) */
 .example-box code {
     color: #e0e0e0;
 }

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn HTML | CodePath</title>
+    <title>Learn JavaScript | CodePath</title>
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="html_style.css">
+    <link rel="stylesheet" href="js_style.css">
 </head>
 <body>
     <!-- Header -->
@@ -28,11 +28,11 @@
         <div class="container">
             <!-- Page Header -->
             <div class="page-header">
-                <div class="tech-icon html-icon">
-                    <i class="fab fa-html5"></i>
+                <div class="tech-icon js-icon">
+                    <i class="fab fa-js"></i>
                 </div>
-                <h1>HTML Basics</h1>
-                <p>The standard markup language for documents designed to be displayed in a web browser.</p>
+                <h1>JavaScript Basics</h1>
+                <p>The programming language of the Web that adds interactivity to your pages.</p>
             </div>
 
             <!-- Content Grid -->
@@ -40,37 +40,37 @@
                 <!-- Sidebar Navigation -->
                 <aside class="topics-sidebar">
                     <div class="sidebar-header">
-                        <h3>HTML Topics</h3>
+                        <h3>JS Topics</h3>
                     </div>
 
                     <nav class="topic-nav">
-                        <a href="#structure" class="topic-link active">
-                            <i class="fas fa-code"></i>
-                            <span>Structure</span>
+                        <a href="#intro" class="topic-link active">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Introduction</span>
                         </a>
-                        <a href="#text" class="topic-link">
-                            <i class="fas fa-font"></i>
-                            <span>Text</span>
+                        <a href="#variables" class="topic-link">
+                            <i class="fas fa-box"></i>
+                            <span>Variables</span>
                         </a>
-                        <a href="#links" class="topic-link">
-                            <i class="fas fa-link"></i>
-                            <span>Links</span>
+                        <a href="#functions" class="topic-link">
+                            <i class="fas fa-code-branch"></i>
+                            <span>Functions</span>
                         </a>
-                        <a href="#images" class="topic-link">
-                            <i class="fas fa-image"></i>
-                            <span>Images</span>
+                        <a href="#dom" class="topic-link">
+                            <i class="fas fa-sitemap"></i>
+                            <span>The DOM</span>
                         </a>
-                        <a href="#lists" class="topic-link">
-                            <i class="fas fa-list"></i>
-                            <span>Lists</span>
+                        <a href="#events" class="topic-link">
+                            <i class="fas fa-mouse-pointer"></i>
+                            <span>Events</span>
                         </a>
-                        <a href="#tables" class="topic-link">
-                            <i class="fas fa-table"></i>
-                            <span>Tables</span>
+                        <a href="#arrays" class="topic-link">
+                            <i class="fas fa-list-ol"></i>
+                            <span>Arrays</span>
                         </a>
-                        <a href="#forms" class="topic-link">
-                            <i class="fas fa-check-square"></i>
-                            <span>Forms</span>
+                        <a href="#async" class="topic-link">
+                            <i class="fas fa-clock"></i>
+                            <span>Async</span>
                         </a>
                     </nav>
                 </aside>
@@ -78,186 +78,193 @@
                 <!-- Main Content Area -->
                 <div class="main-content">
                     
-                    <!-- Basic Structure Section -->
-                    <section id="structure" class="topic-section active">
-                        <h2>Basic Structure</h2>
-                        <p class="section-description">Every HTML document requires a specific structure to be interpreted correctly by browsers.</p>
+                    <!-- Introduction Section -->
+                    <section id="intro" class="topic-section active">
+                        <h2>Introduction to JavaScript</h2>
+                        <p class="section-description">JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else.</p>
                         
                         <div class="example-box">
                             <div class="code-header">
-                                <span>HTML Boilerplate</span>
+                                <span>Console Output</span>
                                 <button class="copy-btn">
                                     <i class="far fa-copy"></i>
                                     Copy
                                 </button>
                             </div>
-                            <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Page Title&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;My First Heading&lt;/h1&gt;
-    &lt;p&gt;My first paragraph.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+                            <pre><code>// Printing to the console
+console.log("Hello, World!");
+
+// Alerting the user
+alert("Welcome to my website!");</code></pre>
                         </div>
                     </section>
 
-                    <!-- Text Elements Section -->
-                    <section id="text" class="topic-section">
-                        <h2>Text Elements</h2>
-                        <p class="section-description">HTML provides various tags to format text, such as headings, paragraphs, and emphasis.</p>
+                    <!-- Variables Section -->
+                    <section id="variables" class="topic-section">
+                        <h2>Variables</h2>
+                        <p class="section-description">Variables are containers for storing data values. Modern JS uses <code>let</code> and <code>const</code>.</p>
                         
                         <div class="example-box">
                             <div class="code-header">
-                                <span>Typography Tags</span>
+                                <span>Variable Declaration</span>
                                 <button class="copy-btn">
                                     <i class="far fa-copy"></i>
                                     Copy
                                 </button>
                             </div>
-                            <pre><code>&lt;!-- Headings --&gt;
-&lt;h1&gt;Main Title&lt;/h1&gt;
-&lt;h2&gt;Subtitle&lt;/h2&gt;
+                            <pre><code>// const cannot be reassigned
+const pi = 3.14;
 
-&lt;!-- Paragraph --&gt;
-&lt;p&gt;This is a standard paragraph of text.&lt;/p&gt;
+// let can be reassigned
+let score = 0;
+score = 10;
 
-&lt;!-- Formatting --&gt;
-&lt;strong&gt;Bold text&lt;/strong&gt; for importance.
-&lt;em&gt;Italic text&lt;/em&gt; for emphasis.
-&lt;span&gt;Inline container&lt;/span&gt; for styling.</code></pre>
+// Strings, Numbers, Booleans
+let name = "Alice";
+let age = 25;
+let isStudent = true;</code></pre>
                         </div>
                     </section>
 
-                    <!-- Links Section -->
-                    <section id="links" class="topic-section">
-                        <h2>Hyperlinks</h2>
-                        <p class="section-description">The anchor tag <code>&lt;a&gt;</code> defines a hyperlink, which is used to link from one page to another.</p>
+                    <!-- Functions Section -->
+                    <section id="functions" class="topic-section">
+                        <h2>Functions</h2>
+                        <p class="section-description">A block of code designed to perform a particular task.</p>
                         
                         <div class="example-box">
                             <div class="code-header">
-                                <span>Anchor Examples</span>
+                                <span>Function Syntax</span>
                                 <button class="copy-btn">
                                     <i class="far fa-copy"></i>
                                     Copy
                                 </button>
                             </div>
-                            <pre><code>&lt;!-- Absolute URL --&gt;
-&lt;a href="https://www.google.com"&gt;Go to Google&lt;/a&gt;
+                            <pre><code>// Traditional Function
+function greet(name) {
+    return "Hello, " + name + "!";
+}
 
-&lt;!-- Relative URL --&gt;
-&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+// Arrow Function (ES6)
+const add = (a, b) => {
+    return a + b;
+};
 
-&lt;!-- Open in new tab --&gt;
-&lt;a href="https://example.com" target="_blank"&gt;External Link&lt;/a&gt;
-
-&lt;!-- Email Link --&gt;
-&lt;a href="mailto:info@example.com"&gt;Send Email&lt;/a&gt;</code></pre>
+console.log(greet("John")); // Output: Hello, John!
+console.log(add(5, 3));     // Output: 8</code></pre>
                         </div>
                     </section>
 
-                    <!-- Images Section -->
-                    <section id="images" class="topic-section">
-                        <h2>Images</h2>
-                        <p class="section-description">Images are embedded using the <code>&lt;img&gt;</code> tag. It is an empty tag, meaning it has no closing tag.</p>
+                    <!-- DOM Section -->
+                    <section id="dom" class="topic-section">
+                        <h2>The DOM</h2>
+                        <p class="section-description">The Document Object Model (DOM) connects web pages to scripts or programming languages.</p>
                         
                         <div class="example-box">
                             <div class="code-header">
-                                <span>Image Attributes</span>
+                                <span>Selecting Elements</span>
                                 <button class="copy-btn">
                                     <i class="far fa-copy"></i>
                                     Copy
                                 </button>
                             </div>
-                            <pre><code>&lt;img src="image.jpg" alt="A descriptive text"&gt;
+                            <pre><code>// Select by ID
+const header = document.getElementById('myHeader');
 
-&lt;!-- With width and height --&gt;
-&lt;img src="logo.png" alt="Company Logo" width="200" height="50"&gt;</code></pre>
+// Select by Class
+const buttons = document.getElementsByClassName('btn');
+
+// Query Selector (Modern)
+const mainTitle = document.querySelector('h1');
+const listItems = document.querySelectorAll('.item');
+
+// Changing content
+mainTitle.textContent = "New Title";
+mainTitle.style.color = "blue";</code></pre>
                         </div>
                     </section>
 
-                    <!-- Lists Section -->
-                    <section id="lists" class="topic-section">
-                        <h2>Lists</h2>
-                        <p class="section-description">HTML offers three ways for specifying lists of information.</p>
+                    <!-- Events Section -->
+                    <section id="events" class="topic-section">
+                        <h2>Events</h2>
+                        <p class="section-description">HTML events are "things" that happen to HTML elements, which JavaScript can react to.</p>
                         
                         <div class="example-box">
                             <div class="code-header">
-                                <span>List Types</span>
+                                <span>Event Listeners</span>
                                 <button class="copy-btn">
                                     <i class="far fa-copy"></i>
                                     Copy
                                 </button>
                             </div>
-                            <pre><code>&lt;!-- Unordered List (Bullets) --&gt;
-&lt;ul&gt;
-    &lt;li&gt;Coffee&lt;/li&gt;
-    &lt;li&gt;Tea&lt;/li&gt;
-&lt;/ul&gt;
+                            <pre><code>const button = document.querySelector('#clickMe');
 
-&lt;!-- Ordered List (Numbers) --&gt;
-&lt;ol&gt;
-    &lt;li&gt;Step One&lt;/li&gt;
-    &lt;li&gt;Step Two&lt;/li&gt;
-&lt;/ol&gt;</code></pre>
+button.addEventListener('click', function() {
+    alert('Button was clicked!');
+});
+
+// Input event
+const input = document.querySelector('input');
+input.addEventListener('input', (e) => {
+    console.log(e.target.value);
+});</code></pre>
                         </div>
                     </section>
 
-                    <!-- Tables Section -->
-                    <section id="tables" class="topic-section">
-                        <h2>Tables</h2>
-                        <p class="section-description">A table allows you to arrange data into rows and columns.</p>
+                    <!-- Arrays Section -->
+                    <section id="arrays" class="topic-section">
+                        <h2>Arrays & Loops</h2>
+                        <p class="section-description">Arrays are special variables which can hold more than one value.</p>
                         
                         <div class="example-box">
                             <div class="code-header">
-                                <span>Table Structure</span>
+                                <span>Array Methods</span>
                                 <button class="copy-btn">
                                     <i class="far fa-copy"></i>
                                     Copy
                                 </button>
                             </div>
-                            <pre><code>&lt;table border="1"&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Name&lt;/th&gt;
-            &lt;th&gt;Role&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;John&lt;/td&gt;
-            &lt;td&gt;Developer&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
+                            <pre><code>const fruits = ["Apple", "Banana", "Cherry"];
+
+// Accessing items
+console.log(fruits[0]); // Apple
+
+// Adding items
+fruits.push("Date");
+
+// Looping (forEach)
+fruits.forEach(fruit => {
+    console.log(fruit);
+});
+
+// Map (creates new array)
+const upperFruits = fruits.map(f => f.toUpperCase());</code></pre>
                         </div>
                     </section>
 
-                    <!-- Forms Section -->
-                    <section id="forms" class="topic-section">
-                        <h2>Forms</h2>
-                        <p class="section-description">Forms are used to collect user input.</p>
+                    <!-- Async Section -->
+                    <section id="async" class="topic-section">
+                        <h2>Async JavaScript</h2>
+                        <p class="section-description">Handling asynchronous operations using Promises and Async/Await.</p>
                         
                         <div class="example-box">
                             <div class="code-header">
-                                <span>Form Elements</span>
+                                <span>Fetch API</span>
                                 <button class="copy-btn">
                                     <i class="far fa-copy"></i>
                                     Copy
                                 </button>
                             </div>
-                            <pre><code>&lt;form action="/submit" method="POST"&gt;
-    &lt;label for="email"&gt;Email:&lt;/label&gt;
-    &lt;input type="email" id="email" name="email" required&gt;
-    
-    &lt;label for="pwd"&gt;Password:&lt;/label&gt;
-    &lt;input type="password" id="pwd" name="pwd"&gt;
-    
-    &lt;button type="submit"&gt;Login&lt;/button&gt;
-&lt;/form&gt;</code></pre>
+                            <pre><code>async function fetchData() {
+    try {
+        const response = await fetch('https://api.example.com/data');
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    }
+}
+
+fetchData();</code></pre>
                         </div>
                     </section>
 
@@ -318,10 +325,10 @@
                     navigator.clipboard.writeText(codeText).then(() => {
                         const originalHtml = this.innerHTML;
                         this.innerHTML = '<i class="fas fa-check"></i> Copied!';
-                        // HTML specific styling for copy feedback
-                        this.style.background = 'rgba(227, 76, 38, 0.1)'; 
-                        this.style.color = '#e34c26';
-                        this.style.borderColor = '#e34c26';
+                        // JS specific styling for copy feedback
+                        this.style.background = 'rgba(247, 223, 30, 0.2)'; 
+                        this.style.color = '#b59700';
+                        this.style.borderColor = '#f7df1e';
                         
                         setTimeout(() => {
                             this.innerHTML = originalHtml;
